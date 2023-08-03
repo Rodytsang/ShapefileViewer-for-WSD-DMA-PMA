@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Include Leaflet CSS file (website design)-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <!--define map size in webpage using style.css-->
+    <link rel="stylesheet" href="style.css"/>
+    <!--Include Leaflet JavaScript file(map)-->
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <!--online library for input shapefile-->
+    <script src="https://unpkg.com/shapefile@0.6"></script>
+    <!--for shapefile but focus on coordinate transformation-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.9.0/proj4.js"></script>
+    
+    <title>WSD Shapefile visualizer</title>
+    
+  </head>
+  <body id="body">
+    <div> 
+      <h1 style="color: #FFDFEF;float: left">ShapeFile Visualizer</h1>
+      <button id="import" onclick=click_listener() style="float: right; color: whitesmoke; margin: 10px 5px; padding:20px; border-radius: 15px; background-color: #e65e74e7; position: right;">import</button>
+    </div>
+    <div id="map" style="clear: both;"></div>
+    <!-- <img src="pink_river.jpg" alt="Girl in a jacket"  height="300px"> -->
+    <!-- <button id="import" onclick=click_listener()>click me</button> -->
+    <script src="mapp.js"></script> 
+  </body>
+</html>
